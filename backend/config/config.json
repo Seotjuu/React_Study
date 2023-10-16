@@ -1,0 +1,14 @@
+{
+  "development": {
+    "stroge": "./database.sqlite3",
+    "dialect": "sqlite"
+  },
+  "test": {
+    "stroge": ":memory",
+    "dialect": "sqlite"
+  },
+  "production": {
+    "stroge": "./database.sqlite3",
+    "dialect": "sqlite"
+  }
+}

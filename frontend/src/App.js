@@ -16,7 +16,7 @@ import NotFound404 from "./component/error/NotFound404";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="mx-[20%] mt-[1%] p-[10px]">
       <BrowserRouter>
         <NavBars />
         <Routes>

@@ -18,17 +18,25 @@ const PostMain = () => {
   }, [postlen]);
 
   return (
-    <div className="border border-black mx-[20%]">
-      <p>현재 게시물 수 : {postlen}</p>
+    <div className="border border-black">
+      <p>현재 수 : {postlen}</p>
 
       <Button
         size={"sm"}
+        variant="primary"
+        onClick={postHandler}
+      >
+        증가
+      </Button>
+      &emsp;
+      <Button
+        size={"sm"}
         variant="secondary"
-        onClick={() => {
-          postHandler();
+        onClick={()=> {
+          setPostLen((prev) => (--prev));
         }}
       >
-        게시물 등록
+        감소
       </Button>
     </div>
   );
