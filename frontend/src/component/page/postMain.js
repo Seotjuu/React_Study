@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import { Button } from "react-bootstrap";
 
+import PostList from "./PostList";
+
 const PostMain = () => {
   const [postlen, setPostLen] = useState(0);
 
@@ -38,6 +40,10 @@ const PostMain = () => {
       >
         감소
       </Button>
+
+      <PostList postlen={postlen} >
+        dasdsdd
+      </PostList>
     </div>
   );
 };
