@@ -37,7 +37,6 @@ const PostList = (abc) => {
   return (
     <div className="border border-black">
       {abc.postlen && (abc.postlen )}
-      {abc.children}
 
       <div className="w-[200px]">
         이름:
@@ -45,6 +44,7 @@ const PostList = (abc) => {
           onChange={changeHandler}/>
       </div>
       {name}
+      {abc.children}
     </div>
   );
 };

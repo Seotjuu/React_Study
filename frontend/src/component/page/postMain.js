@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 import { Button } from "react-bootstrap";
-
+import {useNavigate} from "react-router-dom"
 import PostList from "./PostList";
-
 const PostMain = () => {
+  const navigate = useNavigate();
+
   const [postlen, setPostLen] = useState(0);
 
   // 게시물 등록 버튼 클릭시 postLen + 1
@@ -42,8 +43,16 @@ const PostMain = () => {
       </Button>
 
       <PostList postlen={postlen} >
-        dasdsdd
+        postMain입니다 ㅋㅋ
       </PostList>
+
+      <Button
+        onClick={()=>{
+          navigate('/PostList')
+        }}
+      >
+        로그인
+      </Button>
     </div>
   );
 };

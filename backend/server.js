@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 app.get('/post/postList', (req, res) => {
         res.send({
-            id: 1,
+            id: 2,
             user: "어쩔방구",
             title: "제목제목",
             content: "내용내용"

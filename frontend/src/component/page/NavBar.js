@@ -25,6 +25,12 @@ const NavBars = () => {
               <Nav.Link href="/PostEdit">
                 게시물 수정
               </Nav.Link>
+              <Nav.Link href="/BestPost">
+                베스트 게시물
+              </Nav.Link>
+              <Nav.Link href="/BestComment">
+                베스트 댓글
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
