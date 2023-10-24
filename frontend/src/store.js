@@ -10,8 +10,33 @@ const store = configureStore({
     // conter.up, counter.down
     reducer: {
         counter: counterSlice.reducer
-    }
+    },
+    preloadedState: loadStateFromLocalStorage()
 });
+
+// 로컬 스토리지에서 상태 불러오기
+function loadStateFromLocalStorage() {
+    try {
+      const serializedState = localStorage.getItem('storeKey');
+      if (serializedState === null) {
+        return undefined;
+      }
+      return JSON.parse(serializedState);
+    } catch (error) {
+      return undefined;
+    }
+  }
+
+// 상태 변경 시에 로컬 스토리지에 저장
+store.subscribe(() => {
+    const state = store.getState();
+    try {
+      const serializedState = JSON.stringify(state);
+      localStorage.setItem('storeKey', serializedState);
+    } catch (error) {
+      console.error('Failed to save state to local storage:', error);
+    }
+  });
 
 export default store;
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-
-import { Form } from "react-bootstrap";
-
+import {useDispatch, useSelector} from 'react-redux'
+import { Form, Button } from 'react-bootstrap'
+import {init, up, down, edit, asyncUpFetch} from '../../reducers/counterSlice'
 // backend 연동 axios
 import axios from 'axios';
 
@@ -27,17 +27,31 @@ const PostList = (abc) => {
   // useEffect(() => {
   //   name && setMent(`이름이 변경되었습니다.`)
   // }, [name])
-
+  const dispatch = useDispatch();
+  const count = useSelector((state)=> state.counter.value)
   const [name, setName] = useState("")
 
   const changeHandler = (e) => {
     setName(e.target.value)
   }
 
+useEffect(()=>{
+  console.log(count);
+}, [count])
+
   return (
     <div className="border border-black">
       {abc.postlen && (abc.postlen )}
 
+      <Button
+        onClick={()=>{
+          // action creator 자동 생성
+          dispatch(up(1));
+        }}
+      >
+      {"증가"}
+      </Button>
+        {count}
       <div className="w-[200px]">
         이름:
         <Form.Control className="m-[10px] h-10" value={name}

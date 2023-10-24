@@ -45,7 +45,7 @@ const PostRegister = () => {
         type={"number"}
         value={count}
         onChange={(e)=>{
-          dispatch(edit(e.target.value))
+          dispatch(edit(Number(e.target.value)))
         }}
       />
 
