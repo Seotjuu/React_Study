@@ -27,6 +27,7 @@ const PostList = (abc) => {
   // useEffect(() => {
   //   name && setMent(`이름이 변경되었습니다.`)
   // }, [name])
+  
   const dispatch = useDispatch();
   const count = useSelector((state)=> state.counter.value)
   const [name, setName] = useState("")

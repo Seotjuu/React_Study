@@ -12,6 +12,7 @@ const PostRegister = () => {
   return (
     <>
       <p>React-Redux-toolkit.</p>
+      <p>React-Redux-thunk.</p>
       <Button
         variant="secondary"
         onClick={()=>{

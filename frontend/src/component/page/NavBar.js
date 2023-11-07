@@ -17,19 +17,19 @@ const NavBars = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/PostList">
-                게시물 목록
+               React-Redux
               </Nav.Link>
               <Nav.Link href="/PostRegister">
-                게시물 등록
+              React-Redux-Toolkit
               </Nav.Link>
               <Nav.Link href="/PostEdit">
-                게시물 수정
+                useReducer
               </Nav.Link>
               <Nav.Link href="/BestPost">
-                베스트 게시물
+                Async await
               </Nav.Link>
               <Nav.Link href="/BestComment">
-                베스트 댓글
+                useNavigate
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
